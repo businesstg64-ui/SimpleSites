@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>SimpleSites — сайты под ключ</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Inter, Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #111114;
+      color: #ffffff;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== BACKGROUND GLOW ===== */
+    .glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 60%);
+      filter: blur(120px);
+      top: -200px;
+      right: -200px;
+      z-index: 0;
+    }
+
+    /* ===== HERO ===== */
+    header {
+      position: relative;
+      padding: 140px 20px;
+      text-align: center;
+      z-index: 1;
+    }
+
+    header h1 {
+      font-size: 60px;
+      margin-bottom: 20px;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    header p {
+      font-size: 22px;
+      opacity: 0.85;
+      animation: fadeUp 1.3s ease forwards;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 45px;
+      padding: 18px 48px;
+      border-radius: 50px;
+      background: #ffffff;
+      color: #111114;
+      font-weight: bold;
+      font-size: 16px;
+      transition: 0.3s;
+      animation: fadeUp 1.6s ease forwards;
+    }
+
+    .btn:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 40px rgba(255,255,255,0.25);
+    }
+
+    /* ===== SECTIONS ===== */
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 38px;
+      margin-bottom: 70px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: #1a1a1f;
+      border-radius: 24px;
+      padding: 40px 30px;
+      transition: 0.4s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(120deg, transparent, rgba(255,255,255,0.08), transparent);
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .card:hover::after {
+      opacity: 1;
+    }
+
+    .card:hover {
+      transform: translateY(-12px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      opacity: 0.75;
+    }
+
+    /* ===== EXAMPLES ===== */
+    .example {
+      background: #1a1a1f;
+      padding: 22px 28px;
+      border-radius: 18px;
+      margin-bottom: 16px;
+      transition: 0.3s;
+    }
+
+    .example:hover {
+      transform: translateX(8px);
+    }
+
+    /* ===== COMING SOON ===== */
+    .coming {
+      text-align: center;
+      background: linear-gradient(145deg, #1a1a1f, #111114);
+      border-radius: 28px;
+      padding: 70px 20px;
+    }
+
+    .coming h2 {
+      margin-bottom: 20px;
+    }
+
+    .coming p {
+      opacity: 0.75;
+      font-size: 18px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="glow"></div>
+
+<header>
+  <h1>SimpleSites</h1>
+  <p>Сайты под ключ за 1–2 дня<br>Минимализм. Скорость. Результат.</p>
+  <a href="https://t.me/SimpleSitesBot" class="btn">Оставить заявку</a>
+</header>
+
+<section>
+  <h2>Как мы работаем</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1️⃣ Заявка</h3>
+      <p>Заполняете ТЗ через Telegram-бота за пару минут</p>
+    </div>
+    <div class="card">
+      <h3>2️⃣ Разработка</h3>
+      <p>Дизайн, структура, адаптация под телефон</p>
+    </div>
+    <div class="card">
+      <h3>3️⃣ Готовый сайт</h3>
+      <p>Получаете рабочий сайт и вносите правки</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Примеры</h2>
+  <div class="example">🌸 Bloom Studio — цветочный бизнес</div>
+  <div class="example">🌯 С пылу с жару — шаурмичная</div>
+</section>
+
+<section>
+  <h2>Почему SimpleSites</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>⚡ Быстро</h3>
+      <p>Без недель ожидания и созвонов</p>
+    </div>
+    <div class="card">
+      <h3>🧠 Понятно</h3>
+      <p>Общение и процесс без лишних слов</p>
+    </div>
+    <div class="card">
+      <h3>💸 Честно</h3>
+      <p>Фиксированная цена без сюрпризов</p>
+    </div>
+  </div>
+</section>
+
+<section class="coming">
+  <h2>🌐 Домен</h2>
+  <p>Подключение домена — <b>COMING SOON</b><br>
+  Сейчас используем быстрый бесплатный хостинг</p>
+</section>
+
+<footer>
+  © 2026 SimpleSites
+</footer>
+
+</body>
+</html>
